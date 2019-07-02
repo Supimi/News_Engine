@@ -1,0 +1,75 @@
+SET UTF-8
+
+#ප, පර, අව, ස, අනු, නි, දු, වි, අ, අදි, සු, උ, අබි, පිරි, උප,අප, පස්, පිළි, අති, පි
+PFX A Y 1
+PFX A 0 ප   .
+
+PFX B Y 1
+PFX B 0 සු   .
+
+PFX C Y 1
+PFX C 0 අනු .
+
+PFX D Y 1
+PFX D 0 නි  .
+
+PFX E Y 1
+PFX E 0 ඉ   .
+
+PFX F Y 1
+PFX F Y අබි .
+
+PFX G Y 1
+PFX G 0 පර  .
+
+PFX H Y 1
+PFX H 0 ස   .
+
+PFX I Y 2
+PFX I 0 දු  .
+PFX J 0 වි  .
+
+SFX K Y 1
+SFX K 0 යේ  ය
+
+SFX L Y 7
+SFX L ක ට   .   [ය]කට
+SFX L 0 ට   .
+SFX L 0 ට   ම   [ම]ට
+SFX L 0 ම   .   [^ම]ම
+SFX L 0 ක   .
+SFX L 0 ය   .
+SFX L 0 ව   .
+
+SFX M Y 4
+SFX M 0 ක්  .   
+SFX M 0 න්  .   [^යි]න්
+SFX M යි න් .    [යි]න්
+SFX M 0 ත්  .
+
+SFX N Y 1
+SFX N 0 න්ට    .  
+
+SFX O Y 2
+SFX O 0 වරයා    .
+SFX O 0 තුමා    .
+
+SFX Q Y 2
+SFX Q 0 වෝ  .
+SFX Q 0 ගේ  .
+
+SFX R Y 2
+SFX R 0 යෙක් යා
+SFX R 0 යක .
+
+SFX S Y 2
+SFX S 0 කින්    .
+SFX S 0 වෙක්    .
+
+SFX T Y 6
+SFX T 0 ේ .
+SFX T 0 ී   .
+SFX T 0 ි   .
+SFX T 0 ෝ   .
+SFX T 0 ූ   .
+SFX T 0 ේ   .
