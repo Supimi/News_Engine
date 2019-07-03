@@ -414,18 +414,19 @@
   <fieldType name="text_si" class="solr.TextField" positionIncrementGap="100" multiValued="true">
     <analyzer type="index">
       <tokenizer class="solr.StandardTokenizerFactory"/>
-      <filter class="solr.ShingleFilterFactory"/>
       <filter class="solr.StopFilterFactory" words="lang/stopwords_si.txt" ignoreCase="true"/>
       <filter class="solr.StemmerOverrideFilterFactory" dictionary="lang/stemdict_si.txt" ignoreCase="false"/>
       <filter class="solr.HunspellStemFilterFactory" strictAffixParsing="true" dictionary="si_SLK.dic" affix="si_SLK.aff" ignoreCase="true"/>
-    </analyzer>
+	  <filter class="solr.ShingleFilterFactory"/>
+	  <filter class="solr.ReversedWildcardFilterFactory" maxPosQuestion="1" maxFractionAsterisk="0" maxPosAsterisk="2" withOriginal="true" minTrailing="2"/>
+	</analyzer>
     <analyzer type="query">
       <tokenizer class="solr.StandardTokenizerFactory"/>
-      <filter class="solr.ShingleFilterFactory"/>
       <filter class="solr.StopFilterFactory" words="lang/stopwords_si.txt" ignoreCase="true"/>
       <filter class="solr.StemmerOverrideFilterFactory" dictionary="lang/stemdict_si.txt" ignoreCase="false"/>
       <filter class="solr.HunspellStemFilterFactory" strictAffixParsing="true" dictionary="si_SLK.dic" affix="si_SLK.aff" ignoreCase="true"/>
-      <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt"/>
+      <filter class="solr.ShingleFilterFactory"/>
+	  <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt"/>
       <filter class="solr.FlattenGraphFilterFactory"/>
     </analyzer>
   </fieldType>
