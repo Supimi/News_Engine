@@ -417,26 +417,17 @@
       <filter class="solr.StopFilterFactory" words="lang/stopwords_si.txt" ignoreCase="true"/>
       <filter class="solr.StemmerOverrideFilterFactory" dictionary="lang/stemdict_si.txt" ignoreCase="false"/>
       <filter class="solr.HunspellStemFilterFactory" strictAffixParsing="true" dictionary="si_SLK.dic" affix="si_SLK.aff" ignoreCase="true"/>
-<<<<<<< HEAD
-      <filter class="solr.ShingleFilterFactory"/>
-	    <filter class="solr.ReversedWildcardFilterFactory" maxPosQuestion="1" maxFractionAsterisk="0" maxPosAsterisk="2" withOriginal="true" minTrailing="2"/>
-    </analyzer>
-=======
 	  <filter class="solr.ShingleFilterFactory"/>
 	  <filter class="solr.ReversedWildcardFilterFactory" maxPosQuestion="1" maxFractionAsterisk="0" maxPosAsterisk="2" withOriginal="true" minTrailing="2"/>
 	</analyzer>
->>>>>>> 26353446cbc19fa41e02c445d6fe49f826ad0b02
+
     <analyzer type="query">
       <tokenizer class="solr.StandardTokenizerFactory"/>
       <filter class="solr.StopFilterFactory" words="lang/stopwords_si.txt" ignoreCase="true"/>
       <filter class="solr.StemmerOverrideFilterFactory" dictionary="lang/stemdict_si.txt" ignoreCase="false"/>
       <filter class="solr.HunspellStemFilterFactory" strictAffixParsing="true" dictionary="si_SLK.dic" affix="si_SLK.aff" ignoreCase="true"/>
       <filter class="solr.ShingleFilterFactory"/>
-<<<<<<< HEAD
       <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt"/>
-=======
-	  <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt"/>
->>>>>>> 26353446cbc19fa41e02c445d6fe49f826ad0b02
       <filter class="solr.FlattenGraphFilterFactory"/>
     </analyzer>
   </fieldType>
